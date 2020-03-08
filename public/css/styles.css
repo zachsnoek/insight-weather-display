@@ -1,0 +1,121 @@
+:root {
+    --font-body: 1.5rem;
+    --font-large: 3rem;
+    --font-sol-header: 1.5rem;
+    --font-sol-measurements: 1rem;
+    --font-unit: 1rem;
+}
+
+body {
+    margin: 70px 0 0 0;
+    font-family: 'Spartan', sans-serif;
+    font-size: var(--font-body);
+    text-align: center;
+    color: white;
+
+    background-image: url(https://www.nasa.gov/sites/default/files/thumbnails/image/pia11178.jpg);
+    background-size: cover;
+    background-color: rgba(135, 135, 135, 0.5);
+    background-blend-mode: multiply;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+hr {
+    border: 1.25px solid;
+}
+
+p {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+/* HEADERS */
+
+h1 {
+    font-size: var(--font-large);
+}
+
+h1, .current-sol-header, .sol-header {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.current-sol-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.sol-header {
+    font-size: var(--font-sol-header);
+    font-weight: 600;
+}
+
+/* CURRENT SOL DATA */
+
+.current-sol {
+    margin-top: 75px;
+    display: flex;
+    justify-content: center;
+}
+
+.current-measurements {
+    margin-left: 40px;
+}
+
+.current-measurements p:first-child {
+    margin-top: 0;
+}
+
+.current-sol-date {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+/* SOL DATA */
+
+.sols {
+    margin-top: 75px;
+    margin-bottom: 75px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sol {
+    padding: 15px 10px;
+    background-color: rgba(53, 53, 53, 0.5);
+    background-blend-mode: multiply;
+}
+
+.sol-measurements {
+    font-size: var(--font-sol-measurements);
+}
+
+.unit {
+    font-size: var(--font-unit);
+}
+
+/* FOOTER */
+
+footer {
+    margin-bottom: 30px;
+    font-size: .9rem;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+    .sol {
+        margin-top: 10px;
+        width: 75%;
+    }
+    .sols {
+        flex-direction: column;
+        align-items: center;
+    }
+}

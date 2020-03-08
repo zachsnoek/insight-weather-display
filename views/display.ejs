@@ -1,0 +1,32 @@
+<%- include("partials/header"); -%>
+
+<h1>Latest Weather at Elysium Planitia</h1>
+
+<div class="current-sol">
+    <div class="current-date">
+        <h2 class="current-sol-header">Sol <%= currentSol.sol %></h2>
+        <h3 class="current-sol-date"><%= currentSol.date %></h3>
+    </div>
+    <div class="current-measurements">
+        <p>High: <%= currentSol.temp.max %> <span class="unit">&#176;C</span></p>
+        <p>Low: <%= currentSol.temp.min %>  <span class="unit">&#176;C</span></p>
+        <p>Wind: <%= currentSol.ws %>       <span class="unit">m/s</span></p>
+    </div>
+</div>
+
+<div class="sols">
+    <% insightData.forEach(function(sol) { %>
+        <div class="sol">
+            <h2 class="sol-header">Sol <%= sol.sol %></h2>
+            <p class="sol-date"><%= sol.date %></p>
+            <hr>
+            <div class="sol-measurements">
+                <p>High <%= sol.temp.max %>     <span class="unit">&#176;C</span></p>
+                <p>Low: <%= sol.temp.min %>     <span class="unit">&#176;C</span></p>
+                <p>Wind: <%= sol.ws %>          <span class="unit">m/s</span></p>
+            </div>
+        </div>
+    <% }); %>
+</div>
+
+<%- include("partials/footer"); -%>
